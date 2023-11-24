@@ -1,4 +1,4 @@
 DEFAULT_CONFIDENCE_THRESHOLD = 0.5
-DEMO_IMAGE = r"C:\Users\Ирина\Desktop\Цифровой прорыв\part_1\bad\3486227.mp4_frame_1671.jpg"
+DEMO_IMAGE = r'.\3486227.mp4_frame_1671.jpg"
 #MODEL = ""
 #PROTOTXT = ""
