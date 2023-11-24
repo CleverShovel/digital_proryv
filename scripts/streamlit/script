@@ -6,7 +6,7 @@ from config import CLASSES, COLORS
 from settings import DEFAULT_CONFIDENCE_THRESHOLD, DEMO_IMAGE #, MODEL, PROTOTXT
 
 st.write("""
-# Определение типа мусора
+# Определение типа мусора \u267B\uFE0F
 """)
 
 def process_image(image):
