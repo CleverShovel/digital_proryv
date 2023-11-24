@@ -3,3 +3,4 @@ detect_*
 part_*
 train
 *.zip
+data

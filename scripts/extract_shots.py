@@ -10,10 +10,10 @@ def convert_time_to_seconds(time_str):
     return h * 3600 + m * 60 + s
 
 # Создайте директорию для сохранения кадров, если она еще не существует
-frames_dir = '../extracted_frames_2'
+frames_dir = '../data/extracted_frames_2'
 os.makedirs(frames_dir, exist_ok=True)
 
-train_dir = os.path.join(os.getcwd(), os.pardir, 'train')
+train_dir = os.path.join(os.getcwd(), os.pardir, 'data/train')
 
 folders = os.listdir(train_dir)
 folders.sort()
