@@ -63,7 +63,7 @@ else:
 
 detections = process_image(image)
 image, labels = annotate_image(image, detections, confidence_threshold)
-labels = 'Дерево'
+labels = 'Грунт'
 st.image(
     image, caption=f"Красивая фоточка с камеры", use_column_width=True,
 )
@@ -73,14 +73,14 @@ if labels == 'Дерево':
     st.image(Image.open("images/tree.jpg").resize((100,100)), use_column_width=False
 )
 
-if labels == 'Цемент':
-    st.image(Image.open("images/cement.jpg").resize((100,100)), use_column_width=False
+if labels == 'Бетон':
+    st.image(Image.open("images/concrete.jpg").resize((100,100)), use_column_width=False
 )
 
-if labels == 'Металл':
-    st.image(Image.open("images/metal.jpg").resize((100,100)), use_column_width=False
+if labels == 'Кирпич':
+    st.image(Image.open("images/brick.png").resize((100,100)), use_column_width=False
 )
 
-if labels == 'Песок':
+if labels == 'Грунт':
     st.image(Image.open("images/sand.jpg").resize((100,100)), use_column_width=False
 )

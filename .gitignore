@@ -4,3 +4,4 @@ part_*
 train
 *.zip
 data
+*__pycache__
