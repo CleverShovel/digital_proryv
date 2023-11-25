@@ -17,3 +17,11 @@
 
 
 P.S. Не забудьте посетить экспертные сессии и не стесняйтесь задавать вопросы)
+
+
+# Запуск в контейнере
+1. Собрать image:<br>
+`docker build --pull --rm -f "digital_proryv/dockerfile" -t digital_proryv:latest "digital_proryv"`
+
+1. Запустить контейнер: <br>
+`docker run -d --name web_digital_proryv -p 8080:8080 digital_proryv`
