@@ -44,9 +44,21 @@ def health_check():
     return Response(content=data, media_type="application/json")
 
 @app.post("/uploadfile/")
-async def create_upload_file(uploaded_file: UploadFile = File(...)):
+def create_upload_file(uploaded_file: UploadFile = File(...)):
     file_location = f"/app/data/{uploaded_file.filename}"
     with open(file_location, "wb+") as file_object:
         file_object.write(uploaded_file.file.read())
-    return {"info": f"file '{uploaded_file.filename}' saved at '{file_location}'",
-            "prediction": predict.predict(file_location)}
+    prediction = predict.predict(file_location)
+    
+    #delete file
+    myfile = "/tmp/foo.txt"
+    # If file exists, delete it.
+    if os.path.isfile(file_location):
+        os.remove(file_location)
+        print("Succes: %s file deleted" % file_location)
+    else:
+        # If it fails, inform the user.
+        print("Error: %s file not found" % file_location)
+
+    return {"info": f"file '{uploaded_file.filename}' ",
+            "prediction": prediction}
